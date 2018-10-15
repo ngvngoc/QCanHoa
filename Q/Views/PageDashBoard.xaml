@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Q.Views.PageDashBoard"
+            xmlns:views="clr-namespace:Q.Views">
+    <views:PageReview Title="REVIEW" Icon="twotone_list_black_24.png"/>
+    <views:PageAddNew Title="NEW" Icon="twotone_add_circle_outline_black_24.png" />
+    <views:PageReport Title="REPORT" Icon="twotone_report_black_24.png" />
+    <views:PageAccount Title="ACCOUNT" Icon="twotone_account_circle_24.png"/>
+</TabbedPage>

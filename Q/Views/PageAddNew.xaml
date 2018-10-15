@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Q.Views.PageAddNew"
+             Padding="10,50,10,20">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Label Text="THEM CUA HANG" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Blue"/>
+            <Label Text="Tên cửa hàng :" FontSize="Medium"/>
+            <Editor x:Name="Txt_tench" Placeholder="Ten cua hang" AutoSize="TextChanges" BackgroundColor="Silver"/>
+            <Label Text="Dia Chi:" FontSize="Medium"/>
+            <Editor x:Name="Txt_diachi" Placeholder="Dia Chi:" AutoSize="TextChanges" BackgroundColor="Silver"/>
+            <Label Text="SDT cua hang:" FontSize="Medium"/>
+            <Entry x:Name="Txt_sdt" Placeholder="SDT cua hang:"/>
+            <Button Clicked="Btn_Themcuahang_Clicked" x:Name="Btn_Themcuahang" Text="Xac Nhan" BackgroundColor="Gray" FontSize="Large" FontAttributes="Bold"/>
+            <Button x:Name="Btn_Show" Text="Show Data" Clicked="Btn_show_Clicked"/>
+        
+            <ListView x:Name="Ls_shop">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding SKU_Barcode}"/>
+                                <Label Text="{Binding Shop_Name}"/>
+                                <Label Text="{Binding Shop_Adress}"/>
+                                <Label Text="{Binding Shop_PhoneNumber}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </StackLayout>
+            </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

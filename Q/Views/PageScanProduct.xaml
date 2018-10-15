@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Q.Views.PageScanProduct">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="Lbl_shopname"/>
+            <Label x:Name="Lbl_shopdiachi"/>
+            <Label x:Name="Lbl_shopsdt"/>
+            <SearchBar/>
+            <Button x:Name="btn_scan" Text="Scan" Clicked="Scan_Clicked"/>
+            <Button x:Name="btn_gotohome" Text="HOME" Clicked="Home_Clicked"/>
+            <ScrollView>
+                <ListView x:Name="Ls_sku">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding SKU_Barcode}"/>
+                                <Label Text="{Binding SKU_Name}"/>
+                                <Label Text="{Binding CS_ID}"/>
+                                <Label Text="{Binding Shop_Id}"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

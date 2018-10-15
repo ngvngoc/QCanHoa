@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Q.Views.PageLogin"
+             Padding="10,50,10,20">
+    <ContentPage.Content>
+                <StackLayout>
+            <Label Text="ĐĂNG NHẬP"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Center" 
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   TextColor="BlueViolet"/>
+            <Entry x:Name="txt_username" Placeholder="Username" HorizontalTextAlignment="Center"/>
+            <Entry x:Name="txt_password" Placeholder="Password" HorizontalTextAlignment="Center" IsPassword="True"/>
+            <Button x:Name="Btn_login" Text="LOGIN" FontAttributes="Bold" FontSize="Large"
+                    Clicked="BtnLogin_Clicked" BackgroundColor="Gray" TextColor="Blue"/>
+            <Image Source="logo.png" WidthRequest="100" HeightRequest="100" VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

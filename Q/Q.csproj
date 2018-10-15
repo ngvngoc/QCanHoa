@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Services\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\EmptyXmlFile.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\PageReview.xaml.cs">
+      <DependentUpon>PageReview.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PageAddNew.xaml.cs">
+      <DependentUpon>PageAddNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PageReport.xaml.cs">
+      <DependentUpon>PageReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PageAccount.xaml.cs">
+      <DependentUpon>PageAccount.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

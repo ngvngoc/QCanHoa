@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Q.Views.PageReview">
+    <ContentPage.Content>
+        <ScrollView>
+            <ListView x:Name="Ls_Shop">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding Shop_id}"/>
+                            <Label Text="{Binding Shop_Name}"/>
+                            <Label Text="{Binding US_ID}"/>
+                            <Label Text="{Binding Shop_SyncFlag}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                    
+                </ListView.ItemTemplate>
+                
+            </ListView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
